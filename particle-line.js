@@ -20,8 +20,8 @@ class particleLine {
                 this.r = 1;
                 this.max = max;
                 this.name = name;
-                this.sx = Math.random() * 1; // 速度
-                this.sy = Math.random() * 1; // 速度
+                this.sx = Math.random() * 2 - 1; // 速度
+                this.sy = Math.random() * 2 - 1; // 速度
                 this.hue = 0;
                 this.brightness = this.random(0, 250);
             }
