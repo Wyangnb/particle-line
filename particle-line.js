@@ -17,7 +17,6 @@ class particleLine {
             constructor(x, y, max, name) {
                 this.x = x; // x坐标
                 this.y = y; // y坐标
-                // this.r = 1 + Math.random() * 2; // 点半径
                 this.r = 1;
                 this.max = max;
                 this.name = name;
@@ -94,7 +93,6 @@ class particleLine {
                 if (this.isBg && this.points[i].name) {
                     this.points[i].move(this.mons.x, this.mons.y);
                 }
-                // points[i].draw(ctx);
                 for (let j = i + 1; j < this.points.length; j++){
                     if (this.isBg && this.points[j] === this.mons.lizi) {
                         this.points[i].drawLine(this.ctx, this.points[j], true);
@@ -114,8 +112,6 @@ class particleLine {
 
     bindEvent(liziNum) {
         this.canvas.addEventListener('mousemove', (e) => {
-            // e.preventDefault();
-            // console.log(this.points);
             if (this.isBg) {
                 this.mons.x = e.clientX;
                 this.mons.y = e.clientY;
@@ -148,7 +144,6 @@ class particleLine {
     isPC() {
         if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
             /*window.location.href="你的手机版地址";*/
-            // this.num = 40;
             this.isBg = false;
             console.log(1);
         }
